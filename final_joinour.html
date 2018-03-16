@@ -1,1 +1,457 @@
+<!DOCTYPE html>
+<html lang="vi">
+<meta charset="utf-8">
 
+   <head>
+   </head>
+   <iframe  scrolling="no" frameborder="no" clocktype="html5"
+   style="overflow:hidden;border:0;margin:0;padding:0;width:120px;height:40px;"
+   src="http://www.clocklink.com/html5embed.php?clock=043&timezone=USA_Chicago&color=orange&size=120&Title=&Message=&Target=&From=2018,1,1,0,0,0&Color=orange"></iframe>
+   <div id="menu">
+               <ul>
+                 <li><a href="final_about.html">Home</a></li>
+                 <li><a href="final_service.html">Service</a></li>
+                 <li><a href="final_contact.html">Contact</a></li>
+                 <li><a href="final_news.html">News</a></li>
+                 <li><a href="final_maps.html">Artshow</a></li>
+                 <li><a href="final_joinour.html">Example</a></li>
+               </ul>
+   </div><!--END #menu-->
+   <body background="images/back1.jpg">
+   <h1 align="center"><b><font face="Showcard Gothic" color="#ee0000"
+   size="40">THIS IS AN EXAMPLE OF HOW CSS WORKS</font></b></h1>
+   <div align="center">
+     <table border="0" cellpadding="0" cellspacing="5" width="90%">
+
+       <div class="slideshow-container">
+       <h2></h2>
+       <div class="mySlides fade">
+         <img src="img/slide-1.jpg" style="width:50%">
+         <div class="text"></div>
+       </div>
+
+       <div class="mySlides fade">
+         <img src="img/slide-2.jpg" style="width:50%">
+         <div class="text"></div>
+       </div>
+
+       <div class="mySlides fade">
+         <img src="img/slide-3.jpg" style="width:50%" >
+         <div class="text"></div>
+       </div>
+       </div>
+<p><i>We can use CSS and the statements of {DIV} tags to create a cool photos show.</i><p/>
+       <div style="text-align:center">
+       <span class="dot" onclick="currentSlide(0)"></span>
+       <span class="dot" onclick="currentSlide(1)"></span>
+       <span class="dot" onclick="currentSlide(2)"></span>
+       </div>
+       <font face="Magneto" color="black" size="5"><marquee direction="left" size="10" style="background:yellow">
+         The words will be cool with MARQUEE tags</marquee></font>
+<p>Another way to show your cool pictures</p>
+<marquee id="marq" scrollamount="10" direction="" loop="50" scrolldelay="0" onmouseover="this.stop()" onmouseout="this.start()">
+
+<a href="Link"><img src="img/can.jpeg" title="" width="400" height="300"/> </a>
+
+<a href="Link"><img src="img/oil.jpeg" title="color theory" width="400" height="300"/> </a>
+<a href="Link"><img src="img/lotus.jpeg" title="Val" width="400" height="300"/> </a>
+<a href="Link"><img src="img/pencil.jpeg" title="Ghi chú cho ảnh" width="400" height="300"/> </a>
+
+<a href="Link"><img src="img/can.jpeg" title="Ghi chú cho ảnh" width="400" height="300"/> </a>
+</marquee>
+       <style>
+       * {
+       box-sizing:border-box
+       }
+       h2 {
+       text-align: center;
+       }
+       /* Slideshow container */
+       .slideshow-container {
+       max-width: 500px;
+       position: relative;
+       margin: auto;
+       }
+       /* Ẩn các slider */
+       .mySlides {
+         display: none;
+       }
+       /* Định dạng nội dung Caption */
+       .text {
+       color: #f2f2f2;
+       font-size: 15px;
+       padding: 8px 12px;
+       position: absolute;
+       bottom: 8px;
+       width: 100%;
+       text-align: center;
+       }
+
+       /* định dạng các chấm chuyển đổi các slide */
+       .dot {
+       cursor:pointer;
+       height: 13px;
+       width: 13px;
+       margin: 0 2px;
+       background-color: #bbb;
+       border-radius: 50%;
+       display: inline-block;
+       transition: background-color 0.6s ease;
+       }
+       /* khi được hover, active đổi màu nền */
+       .active, .dot:hover {
+       background-color: #717171;
+       }
+
+       /* Thêm hiệu ứng khi chuyển đổi các slide */
+       .fade {
+       -webkit-animation-name: fade;
+       -webkit-animation-duration: 3s;
+       animation-name: fade;
+       animation-duration: 3s;
+       }
+
+       @-webkit-keyframes fade {
+       from {opacity: .4}
+       to {opacity: 1}
+       }
+
+       @keyframes fade {
+       from {opacity: .4}
+       to {opacity: 1}
+       }
+       </style>
+       <style type="text/css">
+             body{
+                 background-image: url(img/back1.jpg);
+             }
+         </style>
+       <body >
+       <script>
+       //khai báo biến slideIndex đại diện cho slide hiện tại
+       var slideIndex;
+       // KHai bào hàm hiển thị slide
+       function showSlides() {
+           var i;
+           var slides = document.getElementsByClassName("mySlides");
+           var dots = document.getElementsByClassName("dot");
+           for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+           }
+           for (i = 0; i < dots.length; i++) {
+               dots[i].className = dots[i].className.replace(" active", "");
+           }
+
+           slides[slideIndex].style.display = "block";
+           dots[slideIndex].className += " active";
+           //chuyển đến slide tiếp theo
+           slideIndex++;
+           //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+           if (slideIndex > slides.length - 1) {
+             slideIndex = 0
+           }
+           //tự động chuyển đổi slide sau 5s
+           setTimeout(showSlides, 5000);
+       }
+       //mặc định hiển thị slide đầu tiên
+       showSlides(slideIndex = 0);
+
+
+       function currentSlide(n) {
+         showSlides(slideIndex = n);
+       }
+       </script>
+       </body background="img/back1.jpg">
+
+       <style type="text/css">
+       /*==Style for website==*/
+       * {
+       box-sizing: border-box;
+       -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+       }
+       body {
+       font-family: Helvetica,Arial,sans-serif;
+       font-size: 16px;
+       line-height: 1.254em;
+       margin: 0;
+       padding: 0;
+       }
+       a {
+       text-decoration: none;
+       color: #3B8BBA;
+       }
+       a:hover,
+       a:visited {
+       color: #265778;
+       }
+
+       /*==boder for website==*/
+       #container {
+       padding-left: 150px;
+       position: relative;
+       left: 0;
+       width: 100%;
+       }
+       #menu {
+       position: fixed;
+       height: 100%;
+       background-color: #191818;
+       width: 150px;
+       left: 0;
+       }
+
+       /*==Trang trí menu==*/
+       #menu ul {
+       list-style-type: none;
+       padding: 0;
+       margin: 0;
+       }
+
+       #menu ul li {
+       line-height: 2.9em;
+       height: 2.9em;
+       }
+
+       #menu li a {
+       display: block;
+       color: #fff;
+       padding: 0 1em;
+       border-bottom: 1px solid #333;
+       }
+       #menu li:hover {
+       background-color: #454545;
+       }
+       /*==style for boder content==*/
+       #content {
+       padding: 1em 8em;
+       }
+       #header,
+       .call-to-action {
+       text-align: center;
+       }
+       /*==Trang trí header của content==*/
+       #header{}
+       #slogan {
+       color: #8997A0;
+       font-size: 0.8em;
+       }
+       /*==Call to Action==*/
+       .call-to-action {
+       padding: 1.5em 20%;
+       background: #EFEFEF;
+       border: 1px solid#E8E8E8;
+       }
+       /*==Chia cột phần content==*/
+       .row {
+       overflow: auto;
+       margin: 1.5em auto;
+       }
+       /*==Chia cột phần content==*/
+       .row {
+       overflow: auto;
+       margin: 1.5em auto;
+       }
+       .row .col {
+       float: left;
+       width: 31.3333%;
+       margin-right: 2.99%;
+       }
+       .row .col:last-child {
+       float: right;
+       margin-right: 0;
+       }
+       /* Style for photoes */
+       .row .col img {
+       float: left;
+       margin-right: 1em;
+       }
+
+
+       body {
+
+       text-align: center;
+
+       }
+
+   </style>
+       <script language="JavaScript" type="text/javascript">
+
+       var xCol = "#FF0000";
+       var yCol = "#FFFF00";
+       var zCol = "#0000FF";
+
+       var n = 10; //number of dots per trail.
+       var t = 40; //setTimeout speed.
+       var s = 0.2; //effect speed.
+
+       var r,h,w;
+       var d = document;
+       var my = 10;
+       var mx = 10;
+       var stp = 0;
+       var evn = 360/3;
+       var vx = new Array();
+       var vy = new Array();
+       var vz = new Array();
+       var dy = new Array();
+       var dx = new Array();
+
+       var pix = "px";
+
+       var strictmod = ((document.compatMode) &&
+       document.compatMode.indexOf("CSS") != -1);
+
+       var domWw = (typeof window.innerWidth == "number");
+       var domSy = (typeof window.pageYOffset == "number");
+       var idx = d.getElementsByTagName('div').length;
+
+       for (i = 0; i < n; i++)
+       {
+       var dims = (i+1)/2;
+       d.write('<div id="x'+(idx+i)+'" style="position:absolute;'
+       +'top:0px;left:0px;width:'+dims+'px;height:'+dims+'px;'
+       +'background-color:'+xCol+';font-size:'+dims+'px"><\/div>'
+       +'<div id="y'+(idx+i)+'" style="position:absolute;top:0px;'
+       +'left:0px;width:'+dims+'px;height:'+dims+'px;'
+       +'background-color:'+yCol+';font-size:'+dims+'px"><\/div>'
+       +'<div id="z'+(idx+i)+'" style="position:absolute;top:0px;'
+       +'left:0px;width:'+dims+'px;height:'+dims+'px;'
+       +'background-color:'+zCol+';font-size:'+dims+'px"><\/div>');
+       }
+
+       if (domWw) r = window;
+       else
+       {
+       if (d.documentElement &&
+       typeof d.documentElement.clientWidth == "number" &&
+       d.documentElement.clientWidth != 0)
+       r = d.documentElement;
+       else
+       {
+       if (d.body && typeof d.body.clientWidth == "number")
+       r = d.body;
+       }
+       }
+
+       function winsize()
+       {
+       var oh,sy,ow,sx,rh,rw;
+       if (domWw)
+       {
+       if (d.documentElement && d.defaultView &&
+       typeof d.defaultView.scrollMaxY == "number")
+       {
+       oh = d.documentElement.offsetHeight;
+       sy = d.defaultView.scrollMaxY;
+       ow = d.documentElement.offsetWidth;
+       sx = d.defaultView.scrollMaxX;
+       rh = oh-sy;
+       rw = ow-sx;
+       }
+       else
+       {
+       rh = r.innerHeight;
+       rw = r.innerWidth;
+       }
+       h = rh;
+       w = rw;
+       }
+       else
+       {
+       h = r.clientHeight;
+       w = r.clientWidth;
+       }
+       }
+
+       function scrl(yx)
+       {
+       var y,x;
+       if (domSy)
+       {
+       y = r.pageYOffset;
+       x = r.pageXOffset;
+       }
+       else
+       {
+       y = r.scrollTop;
+       x = r.scrollLeft;
+       }
+       return (yx == 0)?y:x;
+       }
+
+       function mouse(e)
+       {
+       var msy = (domSy)?window.pageYOffset:0;
+       if (!e) e = window.event;
+       if (typeof e.pageY == 'number')
+       {
+       my = e.pageY - msy + 16;
+       mx = e.pageX + 6;
+       }
+       else
+       {
+       my = e.clientY - msy + 16;
+       mx = e.clientX + 6;
+       }
+       if (my > h-65) my = h-65;
+       if (mx > w-50) mx = w-50;
+       }
+
+       function assgn()
+       {
+       for (j = 0; j < 3; j++)
+       {
+       dy[j] = my + 50 * Math.cos(stp+j*evn*Math.PI/180) *
+
+       Math.sin((stp+j*25)/2) + scrl(0) + pix;
+       dx[j] = mx + 50 * Math.sin(stp+j*evn*Math.PI/180) *
+
+       Math.sin((stp+j*25)/2) * Math.sin(stp/4) + pix;
+       }
+       stp+=s;
+
+       for (i = 0; i < n; i++)
+       {
+       if (i < n-1)
+       {
+       vx[i].top = vx[i+1].top; vx[i].left = vx[i+1].left;
+       vy[i].top = vy[i+1].top; vy[i].left = vy[i+1].left;
+       vz[i].top = vz[i+1].top; vz[i].left = vz[i+1].left;
+       }
+       else
+       {
+       vx[i].top = dy[0]; vx[i].left = dx[0];
+       vy[i].top = dy[1]; vy[i].left = dx[1];
+       vz[i].top = dy[2]; vz[i].left = dx[2];
+       }
+       }
+       setTimeout(assgn,t);
+       }
+
+       function init()
+       {
+       for (i = 0; i < n; i++)
+       {
+       vx[i] = document.getElementById("x"+(idx+i)).style;
+       vy[i] = document.getElementById("y"+(idx+i)).style;
+       vz[i] = document.getElementById("z"+(idx+i)).style;
+       }
+       winsize();
+       assgn();
+       }
+
+       if (window.addEventListener)
+       {
+       window.addEventListener("resize",winsize,false);
+       window.addEventListener("load",init,false);
+       document.addEventListener("mousemove",mouse,false);
+       }
+       else
+       if (window.attachEvent)
+       {
+       window.attachEvent("onload",init);
+       document.attachEvent("onmousemove",mouse);
+       window.attachEvent("onresize",winsize);
+       }
+       </script>
